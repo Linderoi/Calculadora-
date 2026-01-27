@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Para Minha Princesa</title>
+</head>
+<body>
+    <div class="stars-container"></div>
+    
+    <div class="greetings">
+        <span>MINHA PRINCESA</span>
+    </div>
+
+    <div class="description">
+        <span>
+            Palavras como bonita, perfeita, linda, não são suficientes para te elogiar.<br> 
+            Você está além disso, sua beleza é simplesmente <b>inexplicável</b>.<br> 
+            Isso é para você! <3
+        </span>
+    </div>
+
+    <div class="button">
+    <button class="botones">
+        <a href="flower.html?play=true" style="text-decoration: none; color: #000;">CLICK AQUÍ</a>
+    </button>
+</div>
+
+    <script>
+        const container = document.querySelector('.stars-container');
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const size = Math.random() * 3 + 'px';
+            star.style.width = size;
+            star.style.height = size;
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            // Define a duração da animação individualmente
+            star.style.setProperty('--duration', (Math.random() * 3 + 2) + 's');
+            star.style.animationDelay = Math.random() * 5 + 's';
+            container.appendChild(star);
+        }
+    </script>
+</body>
+</html>
